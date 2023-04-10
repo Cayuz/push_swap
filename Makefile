@@ -23,11 +23,11 @@ RESET		:=	\033[0m
 
 #	==== COLORS! (but the bold kind) ====	#
 BLACKB		:=	\033[1;30m
-REDB			:=	\033[1;31m
+REDB		:=	\033[1;31m
 GREENB		:=	\033[1;32m
 YELLOWB		:=	\033[1;33m
 BLUEB		:=	\033[1;34m
-MAGENTAB		:=	\033[1;35m
+MAGENTAB	:=	\033[1;35m
 CYANB		:=	\033[1;36m
 WHITEB		:=	\033[1;37m
 
