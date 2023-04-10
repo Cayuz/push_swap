@@ -32,8 +32,8 @@ CYANB		:=	\033[1;36m
 WHITEB		:=	\033[1;37m
 
 ${NAME}: ${OBJS}
-	@ ${CC} $^ ${CFLAGS} libft/libft.a ft_printf/libftprintf.a -o ${NAME}
-	@ echo "${GREENB}Succesfully made: ${RESET}${NAME}!"
+	@ ${CC} $^ ${CFLAGS} libft/libft.a ft_printf/ft_printf.a -o ${NAME}
+	@ echo "${GREENB}Compiled: ${RESET}${NAME}!"
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c
 	@ mkdir -p $(OBJ_DIR)
@@ -54,13 +54,14 @@ clean:
 	@ make -C libft clean
 	@ make -C ft_printf clean
 	@ rm -rf ${OBJS}
-	@ echo "${YELLOWB}Cleaned: ${RESET}${NAME}, ft_printf and libft!"
+	@ echo "${YELLOWB}Removed: ${RESET}${NAME}, ft_printf.a, and libft.a!"
+
 
 fclean: clean
 	@ make -C libft fclean
 	@ make -C ft_printf fclean
 	@ rm -f ${NAME}
-	@ echo "${MAGENTAB}Fully cleaned: ${RESET}${NAME}, ft_printf and libft!"
+	@ echo "${MAGENTAB}Cleaned: ${RESET}${NAME}, ft_printf, and libft!"
 
 re: fclean all
 

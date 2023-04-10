@@ -1,4 +1,4 @@
-NAME	:=	libftprintf.a
+NAME	:=	ft_printf.a
 INCLUDE	:=	ft_printf.h
 CC		:=	gcc
 CFLAGS	:=	-Wall -Werror -Wextra -g -fsanitize=address
