@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/21 11:20:04 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2022/11/25 15:15:24 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/04/18 17:07:49 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include "../ft_printf/ft_printf.h"
+
+/* ====		LIBFT FUNCTIONS		==== */
 
 void	ft_bzero(char *str, int n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);;
@@ -50,5 +53,17 @@ char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	**ft_split(char *s, char c);
+
+/* ====		FT_PRINTF FUNCTIONS		==== */
+
+int		ft_printf(const char *str, ...);
+int		check_percent(const char *s, va_list arguments);
+int		conversion(va_list arguments, char character);
+int		ft_put_c(int c);
+int		ft_put_s(char *s);
+int		ft_put_num(long int n);
+int		ft_put_u(unsigned long long n, unsigned int base, char c);
+int		ft_put_u_2(char c, int x, unsigned long long num);
+int		ft_put_p(void *n);
 
 #endif

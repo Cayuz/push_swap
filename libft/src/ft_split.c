@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/08 12:14:15 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2022/11/29 14:41:59 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/04/18 16:46:46 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,11 @@ static int	word_counter(char *s, char c)
 			check = 0;
 		}
 		if (s[i] == c)
-		{
 			check = 1;
-		}
 		i++;
 	}
+	if (counter == 1)
+		return (ft_printf ("Error"), 0);
 	return (counter);
 }
 
@@ -50,9 +50,7 @@ static int	char_counter(char *s, char c)
 		{
 			char_count++;
 			if (s[i + 1] == c || s[i + 1] == '\0')
-			{
 				return (char_count);
-			}
 			i++;
 		}
 		i++;
@@ -68,9 +66,7 @@ static char	*make_word(char *s, char c)
 	char_count = char_counter(s, c);
 	ptr = malloc((char_count + 1) * sizeof(char));
 	if (ptr == NULL)
-	{
 		return (NULL);
-	}
 	ft_strlcpy(ptr, s, char_count + 1);
 	return (ptr);
 }
@@ -109,7 +105,7 @@ char	**ft_split(char *s, char c)
 		arrays[i] = make_word(s + c_count, c);
 		if (arrays[i] == NULL)
 			return (free_it(arrays));
-		s = s + char_counter(s, c) + c_count;
+		s += char_counter(s, c) + c_count;
 		i++;
 		c_count = 0;
 	}
