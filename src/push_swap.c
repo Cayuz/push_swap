@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/02 14:53:51 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/04/23 14:48:33 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/04/25 13:24:27 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,6 @@ t_list	*first_check(int argc, char **argv, t_list *a)
 	}
 	return (a);
 }
-
-
-/* Use ft_isdigit, ft_atoi, */
-
 
 int	main(int argc, char *argv[])
 {
