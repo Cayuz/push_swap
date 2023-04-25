@@ -6,38 +6,14 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/05 18:18:50 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/04/25 14:38:41 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/04/25 17:37:19 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/* ==== create the first node of the list, and send to link it to another newly
-created node ==== */
-t_list	*create_list(char **argv)
-{
-	t_list	*a;
-	char	**temp;
-	int		i;
-
-	i = 0;
-	*temp = *argv;
-	print_list(a, 'a');
-	while (argv[i])
-	{
-		if (i == 0)
-			a = create_node((ft_atoi(argv[i])));
-		else if (a == NULL)
-			return (NULL);
-		else
-			link_node(a, create_node(ft_atoi(argv[i])));
-		i++;
-	}
-	return (a);
-}
-
 /* ==== create a new node ==== */
-t_list	*create_node(int digit)
+static t_list	*create_node(int digit)
 {
 	t_list	*new_node;
 
@@ -49,15 +25,33 @@ t_list	*create_node(int digit)
 	return (new_node);
 }
 
-/* ==== link the current node to the next node ==== */
-int	link_node(t_list *curr_node, t_list *next_node)
+/* ==== create the first node of the list, and send to link it to another newly
+created node ==== */
+t_list	*create_list(char **argv)
 {
-	if (curr_node == NULL || next_node == NULL)
-		return (0);
-	while (curr_node->next != NULL)
-		curr_node = curr_node->next;
-	curr_node->next = next_node;
-	return (1);
+	t_list	*a;
+	t_list	*tmp;
+	t_list	*first;
+	int		i;
+
+	i = 1;
+	a = create_node((ft_atoi(argv[0])));
+	if (a == NULL)
+			return (NULL);
+	first = a;
+	while (argv[i])
+	{
+		tmp = create_node((ft_atoi(argv[i])));
+		if (tmp == NULL)
+		{
+			// free_list(first);
+			return (NULL);
+		}
+		a->next = tmp;
+		a = a->next;
+		i++;
+	}
+	return (first);
 }
 
 /* ==== DELETE! ==== */

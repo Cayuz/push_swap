@@ -1,20 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_isdigit.c                                       :+:    :+:            */
+/*   free_lists.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/17 13:30:01 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/04/25 17:15:39 by cvan-vli      ########   odam.nl         */
+/*   Created: 2023/04/25 18:25:59 by cvan-vli      #+#    #+#                 */
+/*   Updated: 2023/04/25 18:34:17 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-int	ft_isdigit(int i)
+void	free_lists(t_list *a, t_list *b)
 {
-	if (i >= 0 && i <= 9)
-		return (1);
-	return (0);
+	t_list	*temp;
+
+	while (a)
+	{
+		temp = a->next;
+		if (a)
+			free(a);
+		a = temp;
+	}
+	while (b)
+	{
+		temp = b->next;
+		if (b)
+			free(b);
+		b = temp;
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/23 12:54:16 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/04/25 14:28:59 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/04/25 18:37:36 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,63 +18,71 @@
 /*	CHECK INPUT:
 	MIN/MAX? */
 
-void	ft_error(void)
+int	ft_checkdigit(t_list *a)
 {
-	write(STDERR_FILENO, "Error\n", 6);
-	exit(1);
-}
-
-int	ft_checkdigit(int *arg)
-{
-	int	i;
-
-	i = 0;
-	while (arg[i])
+	while (a)
 	{
-		if (!ft_isdigit(arg[i]))
+		if (!ft_isdigit(a->value))
+		{
 			ft_error();
-		i++;
+			free_lists(a, b);
+		}
+		a = a->next;
 	}
-	return (0);
+	return (1);
 }
 
-int	ft_dup(int *arg, int num)
+int	ft_dup(t_list *a)
 {
-	int	i;
+	t_list	*first;
+	t_list	*num;
 
-	i = 0;
-	while (arg[i])
+	first = a;
+	num = a->next;
+	while (num)
 	{
-		if (arg[i] == num)
-			ft_error();
-		i++;
+		a = first;
+		while (a)
+		{
+			if (num->value == a->value && num != a)
+			{
+				ft_error();
+				free_lists(a, b);
+			}
+			a = a->next;
+		}
+		num = num->next;
 	}
-	return (0);
+	return (1);
 }
 
-int	ft_min_max(int *arg)
-{
-	int	i;
+// int	ft_min_max(t_list *a)
+// {
+// 	int	i;
 
-	i = 0;
-	while (arg[i])
-	{
-		if (arg[i] <= INT_MIN || arg[i] >= INT_MAX)
-			ft_error();
-		i++;
-	}
-	return (0);
-}
+// 	i = 0;
+// 	while (a[i])
+// 	{
+// 		if (a[i] <= INT_MIN || a[i] >= INT_MAX)
+// 			return (0);
+// 		i++;
+// 	}
+// 	return (1);
+// }
 /*	geef argv door als string aan de checker functies.
 	gebruik de check functies in een while loop/if statement.
 	return nul als het allemaal goed gaat?
 	iets met atoi?*/
 
-void	ft_check(char *a)
-{
-	int	i;
+// void	ft_check(t_list *a)
+// {
+// 	int	i;
 
-	i = 1;
-	ft_dup(ft_atoi(argv[i]));
-	i++;
-}
+// 	i = 0;
+// 	while (a[i])
+// 	{
+// 		if (!ft_dup(a[i]) || !ft_min_max(a[i]) || !ft_checkdigit(a[i]))
+// 			ft_error();
+// 		i++;
+// 	}
+// }

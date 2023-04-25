@@ -6,28 +6,29 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/02 14:53:51 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/04/25 14:34:13 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/04/25 18:38:02 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_list	*first_check(int argc, char **argv, t_list *a)
+t_list	*create_stack(int argc, char **argv, t_list *a)
 {
 	int		i;
 
 	i = 0;
-	if (argc == 1)
-		ft_error();
 	/*if argc == 2, check if it's string or a single digit. if it is a single digit -> error*/
-	else if (argc == 2)
+	if (argc == 2)
 	{
 		argv = ft_split(argv[1], ' ');
 		if (argv == NULL)
+		{
 			ft_error();
+			free_lists(a, b);
+		}
 		a = create_list(argv);
 	}
-	else if (argc > 2)
+	else
 	{
 		argv += 1;
 		a = create_list(argv);
@@ -39,9 +40,12 @@ int	main(int argc, char *argv[])
 {
 	t_list	*a = NULL;
 
-	a = first_check(argc, argv, a);
+	a = create_stack(argc, argv, a);
 	print_list(a, 'a');
-	
-	//check(a)
+	ft_dup(a);
+	ft_checkdigit(a);
+	//ft_check(a);
+	//sort
+	//free
 	return (0);
 }

@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_isdigit.c                                       :+:    :+:            */
+/*   ft_isspace.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/17 13:30:01 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/04/25 17:15:39 by cvan-vli      ########   odam.nl         */
+/*   Created: 2023/04/25 17:39:33 by cvan-vli      #+#    #+#                 */
+/*   Updated: 2023/04/25 17:42:13 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int i)
+int	ft_isspace(char	c)
 {
-	if (i >= 0 && i <= 9)
+	if ((c >= 9 && c <= 13) || c == 32)
 		return (1);
 	return (0);
 }
