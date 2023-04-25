@@ -6,19 +6,21 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/23 12:54:16 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/04/25 11:42:21 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/04/25 14:28:59 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <limits.h>
+#include <stdlib.h>
+#include "push_swap.h"
 
 /*	CHECK INPUT:
 	MIN/MAX? */
 
 void	ft_error(void)
 {
-	write(STDERR_FILEN0, "Error\n", 6);
+	write(STDERR_FILENO, "Error\n", 6);
 	exit(1);
 }
 
@@ -63,13 +65,16 @@ int	ft_min_max(int *arg)
 	}
 	return (0);
 }
-
-data type	ft_check(char *arg)
-{
-	geef argv door als string aan de checker functies.
+/*	geef argv door als string aan de checker functies.
 	gebruik de check functies in een while loop/if statement.
 	return nul als het allemaal goed gaat?
-	iets met atoi?
+	iets met atoi?*/
 
-	
+void	ft_check(char *a)
+{
+	int	i;
+
+	i = 1;
+	ft_dup(ft_atoi(argv[i]));
+	i++;
 }

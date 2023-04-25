@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/05 18:18:50 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/04/18 19:23:41 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/04/25 14:38:41 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,15 @@
 
 /* ==== create the first node of the list, and send to link it to another newly
 created node ==== */
-t_list	*create_list(char *argv[])
+t_list	*create_list(char **argv)
 {
 	t_list	*a;
+	char	**temp;
 	int		i;
 
 	i = 0;
+	*temp = *argv;
+	print_list(a, 'a');
 	while (argv[i])
 	{
 		if (i == 0)

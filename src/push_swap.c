@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/02 14:53:51 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/04/25 13:24:27 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/04/25 14:34:13 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,7 @@ int	main(int argc, char *argv[])
 
 	a = first_check(argc, argv, a);
 	print_list(a, 'a');
+	
+	//check(a)
 	return (0);
 }

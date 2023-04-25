@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/21 17:05:58 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2022/11/30 12:05:15 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/04/25 13:52:59 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,7 @@ int	ft_atoi(const char *str)
 	if (str[i] == '-' || str[i] == '+')
 	{
 		if (str[i] == '-')
-		{
 			sign = -1;
-		}
 		i++;
 	}
 	while (str[i] >= '0' && str[i] <= '9')

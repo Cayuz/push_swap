@@ -6,7 +6,8 @@ OBJ_DIR		:=	obj/
 INCLUDE		:=	push_swap.h -Ilibft -Ift_printf
 
 SRCS		:=	push_swap.c \
-				nodes.c
+				nodes.c \
+				input_check.c
 
 SRC			:=	$(addprefix $(SRC_DIR), $(SRCS))
 
@@ -45,12 +46,13 @@ ${NAME}: ${OBJS}
 	@ ${CC} $^ ${CFLAGS} libft/libft.a ft_printf/ft_printf.a -o ${NAME}
 	@ echo "${GREENB}Compiled: ${RESET}${NAME}!"
 
+obj/%.o: %.c
+	@ ${CC} ${CFLAGS} -c -o $@ $<
+	
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c
 	@ mkdir -p $(OBJ_DIR)
 	@ $(CC) $(CFLAGS) -I ./ -c -o $@ $<
 
-obj/%.o: %.c
-	@ ${CC} ${CFLAGS} -c -o $@ $<
 
 clean: 
 	@ make -C libft clean
