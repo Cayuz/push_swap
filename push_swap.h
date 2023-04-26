@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/01 17:25:19 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/04/25 17:44:20 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/04/26 09:53:33 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,6 @@ int		ft_checkdigit(t_list *a);
 int		ft_dup(t_list *a);
 int		ft_min_max(t_list *arg);
 void	ft_check(t_list *a);
+void	free_lists(t_list *a, t_list *b);
 
 #endif

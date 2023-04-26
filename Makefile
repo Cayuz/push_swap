@@ -7,7 +7,8 @@ INCLUDE		:=	push_swap.h -Ilibft -Ift_printf
 
 SRCS		:=	push_swap.c \
 				nodes.c \
-				input_check.c
+				input_check.c \
+				utils.c 
 
 SRC			:=	$(addprefix $(SRC_DIR), $(SRCS))
 
@@ -55,13 +56,15 @@ $(OBJ_DIR)%.o: $(SRC_DIR)%.c
 
 
 clean: 
+	@ echo "${YELLOWB}Removing...${RESET}"
 	@ make -C libft clean
 	@ make -C ft_printf clean
 	@ rm -rf ${OBJ_DIR}
-	@ echo "${YELLOWB}Removed: ${RESET}${NAME}, ft_printf.a, and libft.a!"
+	@ echo "${YELLOWB}Removed programs!${RESET}"
 
 
 fclean: clean
+	@ echo "${MAGENTAB}Cleaning... ${RESET}"
 	@ make -C libft fclean
 	@ make -C ft_printf fclean
 	@ rm -f ${NAME}

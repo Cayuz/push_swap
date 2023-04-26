@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/21 17:05:58 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/04/25 18:23:42 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/04/26 09:50:41 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,4 @@ int	ft_atoi(const char *str)
 	return (result * sign);
 }
 
-// big issue: when calling ft_error youre going to leak.
-// make your ft_error check iflists exists and if they do free them.
+//put free_lists into atoi!

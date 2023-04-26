@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/23 12:54:16 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/04/25 18:37:36 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/04/26 10:24:52 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,19 +56,6 @@ int	ft_dup(t_list *a)
 	return (1);
 }
 
-// int	ft_min_max(t_list *a)
-// {
-// 	int	i;
-
-// 	i = 0;
-// 	while (a[i])
-// 	{
-// 		if (a[i] <= INT_MIN || a[i] >= INT_MAX)
-// 			return (0);
-// 		i++;
-// 	}
-// 	return (1);
-// }
 /*	geef argv door als string aan de checker functies.
 	gebruik de check functies in een while loop/if statement.
 	return nul als het allemaal goed gaat?
