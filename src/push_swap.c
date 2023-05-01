@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/02 14:53:51 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/04/26 10:22:48 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/05/01 16:38:58 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,14 +43,15 @@ int	main(int argc, char *argv[])
 	t_list	*a;
 	t_list	*b;
 
-	a = NULL;
-	b = NULL;
+	if (argc < 2)
+		return (0);
 	a = create_stack(argc, argv, a, b);
+	b = NULL;
 	print_list(a, 'a');
-	ft_dup(a);
+	ft_dup(a, b);
 	ft_checkdigit(a);
 	//ft_check(a);
 	//sort
-	//free
+	free_lists(a, b);
 	return (0);
 }

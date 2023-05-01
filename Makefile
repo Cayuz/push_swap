@@ -45,7 +45,7 @@ ft_printf:
 
 ${NAME}: ${OBJS}
 	@ ${CC} $^ ${CFLAGS} libft/libft.a ft_printf/ft_printf.a -o ${NAME}
-	@ echo "${GREENB}Compiled: ${RESET}${NAME}!"
+	@ echo "${GREENB}Compiled ${RESET}${NAME}!"
 
 obj/%.o: %.c
 	@ ${CC} ${CFLAGS} -c -o $@ $<

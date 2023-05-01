@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/23 12:54:16 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/04/26 10:24:52 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/05/01 16:32:35 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	ft_checkdigit(t_list *a)
 	return (1);
 }
 
-int	ft_dup(t_list *a)
+int	ft_dup(t_list *a, t_list *b)
 {
 	t_list	*first;
 	t_list	*num;
