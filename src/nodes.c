@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/05 18:18:50 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/04/25 17:37:19 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/05/02 12:47:09 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,16 +29,16 @@ static t_list	*create_node(int digit)
 created node ==== */
 t_list	*create_list(char **argv)
 {
-	t_list	*a;
+	t_list	*head;
 	t_list	*tmp;
 	t_list	*first;
 	int		i;
 
 	i = 1;
-	a = create_node((ft_atoi(argv[0])));
-	if (a == NULL)
+	head = create_node((ft_atoi(argv[0])));
+	if (head == NULL)
 			return (NULL);
-	first = a;
+	first = head;
 	while (argv[i])
 	{
 		tmp = create_node((ft_atoi(argv[i])));
@@ -47,8 +47,8 @@ t_list	*create_list(char **argv)
 			// free_list(first);
 			return (NULL);
 		}
-		a->next = tmp;
-		a = a->next;
+		head->next = tmp;
+		head = head->next;
 		i++;
 	}
 	return (first);

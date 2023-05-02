@@ -54,7 +54,6 @@ $(OBJ_DIR)%.o: $(SRC_DIR)%.c
 	@ mkdir -p $(OBJ_DIR)
 	@ $(CC) $(CFLAGS) -I ./ -c -o $@ $<
 
-
 clean: 
 	@ echo "${YELLOWB}Removing...${RESET}"
 	@ make -C libft clean

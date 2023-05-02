@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/23 12:54:16 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/05/01 16:32:35 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/05/02 12:49:53 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,41 +25,40 @@ int	ft_checkdigit(t_list *a)
 		if (!ft_isdigit(a->value))
 		{
 			ft_error();
-			free_lists(a, b);
+			free_lists(a);
 		}
 		a = a->next;
 	}
 	return (1);
 }
 
-int	ft_dup(t_list *a, t_list *b)
+int	ft_dup(t_list *head, t_list *b)
 {
 	t_list	*first;
 	t_list	*num;
 
-	first = a;
-	num = a->next;
+	first = head;
+	num = head->next;
 	while (num)
 	{
-		a = first;
-		while (a)
+		head = first;
+		while (head)
 		{
-			if (num->value == a->value && num != a)
+			if (num->value == head->value && num != head)
 			{
 				ft_error();
-				free_lists(a, b);
+				free_lists(head);
 			}
-			a = a->next;
+			head = head->next;
 		}
 		num = num->next;
 	}
 	return (1);
 }
 
-/*	geef argv door als string aan de checker functies.
-	gebruik de check functies in een while loop/if statement.
-	return nul als het allemaal goed gaat?
-	iets met atoi?*/
+/*	
+	
+	*/
 
 // void	ft_check(t_list *a)
 // {
