@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/21 17:05:58 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/04/26 09:50:41 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/05/02 19:04:44 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,3 @@ int	ft_atoi(const char *str)
 	}
 	return (result * sign);
 }
-
-//put free_lists into atoi!

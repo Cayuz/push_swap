@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/23 12:54:16 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/05/02 12:49:53 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/05/02 19:06:43 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	ft_checkdigit(t_list *a)
 	return (1);
 }
 
-int	ft_dup(t_list *head, t_list *b)
+int	ft_dup(t_list *head)
 {
 	t_list	*first;
 	t_list	*num;
@@ -56,19 +56,12 @@ int	ft_dup(t_list *head, t_list *b)
 	return (1);
 }
 
-/*	
-	
-	*/
-
-// void	ft_check(t_list *a)
-// {
-// 	int	i;
-
-// 	i = 0;
-// 	while (a[i])
-// 	{
-// 		if (!ft_dup(a[i]) || !ft_min_max(a[i]) || !ft_checkdigit(a[i]))
-// 			ft_error();
-// 		i++;
-// 	}
-// }
+void	ft_check(t_list *a)
+{
+	while (a)
+	{
+		if (!ft_dup(a) || !ft_checkdigit(a))
+			ft_error();
+		a = a->next;
+	}
+}
