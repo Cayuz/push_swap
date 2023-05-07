@@ -6,14 +6,14 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/01 17:25:19 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/05/07 15:24:43 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/05/07 19:31:20 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-/* ==== libraries ==== */
+/* ==== LIBRARIES ==== */
 
 # include "./libft/libft.h"
 # include "./ft_printf/ft_printf.h"
@@ -22,22 +22,36 @@
 # include <limits.h>
 # include <stdlib.h>
 
-/* ==== struct ==== */
+/* ==== STRUCT ==== */
 
 typedef struct s_struct{
 	int					value;
 	struct s_struct		*next;
 }	t_list;
 
-/* ==== functions ==== */
+/* ==== FUNCTIONS ==== */
 
+//linked list functions
 t_list	*create_stack(int argc, char **argv);
 t_list	*create_list(char *argv[]);
+
+//check and trial functions
 void	print_list(t_list *node, int stack);
-void	ft_error(char *msg);
 int		ft_checkdigit(t_list *a);
 int		ft_dup(t_list *a);
-void	ft_check(t_list *a);
+	// void	ft_check(t_list *a);
+
+//free and error functions
+void	ft_error(char *msg);
 void	free_lists(t_list *list);
+
+//swap functions
+void	swap(t_list **head);
+void	sa(t_list **a);
+void	sb(t_list **b);
+void	ss(t_list **a, t_list **b);
+
+//rotate functions
+void	rotate(t_list **head);
 
 #endif

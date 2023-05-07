@@ -1,15 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   operations.c                                       :+:    :+:            */
+/*   ft_putendl.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/05/07 15:24:09 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/05/07 16:04:00 by cvan-vli      ########   odam.nl         */
+/*   Created: 2023/05/07 19:21:07 by cvan-vli      #+#    #+#                 */
+/*   Updated: 2023/05/07 19:21:19 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-hao
+void	ft_putendl_fd(char *s)
+{
+	int	i;
+
+	i = 0;
+	while (s[i])
+	{
+		write(1, &s[i], 1);
+		i++;
+	}
+	write(1, "\n", 1);
+}

@@ -1,0 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   rotate.c                                           :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2023/05/07 19:22:52 by cvan-vli      #+#    #+#                 */
+/*   Updated: 2023/05/07 19:26:12 by cvan-vli      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "push_swap.h"
+
+/*==============================================================================================
+ra (rotate a): Shift up all elements of stack a by 1. The first element becomes the last one.
+rb (rotate b): Shift up all elements of stack b by 1. The first element becomes the last one.
+rr : ra and rb at the same time.
+==============================================================================================*/
+
+void	rotate(t_list **head)
+{
+	
+}
