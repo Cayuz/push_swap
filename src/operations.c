@@ -1,32 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   utils.c                                            :+:    :+:            */
+/*   operations.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/04/25 18:25:59 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/05/07 13:21:08 by cvan-vli      ########   odam.nl         */
+/*   Created: 2023/05/07 15:24:09 by cvan-vli      #+#    #+#                 */
+/*   Updated: 2023/05/07 15:24:24 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	free_lists(t_list *list)
-{
-	t_list	*temp;
-
-	while (list)
-	{
-		temp = list->next;
-		if (list)
-			free(list);
-		list = temp;
-	}
-}
-
-void	ft_error(char *msg)
-{
-	ft_putendl_fd(msg, STDERR_FILENO);
-	exit(1);
-}

@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/01 17:25:19 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/05/02 19:05:30 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/05/07 15:24:43 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ typedef struct s_struct{
 t_list	*create_stack(int argc, char **argv);
 t_list	*create_list(char *argv[]);
 void	print_list(t_list *node, int stack);
-void	ft_error(void);
+void	ft_error(char *msg);
 int		ft_checkdigit(t_list *a);
 int		ft_dup(t_list *a);
 void	ft_check(t_list *a);

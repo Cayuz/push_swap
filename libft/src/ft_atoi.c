@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/21 17:05:58 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/05/02 19:04:44 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/05/07 14:08:56 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,9 @@ int	ft_atoi(const char *str)
 		if (str[i] >= '0' && str[i] <= '9')
 			result = result * 10 + (str[i] - '0');
 		else
-			ft_error();
+			ft_error("Error: invalid input");
 		if (result > INT_MAX || result < INT_MIN)
-			ft_error();
+			ft_error("Error: overflow");
 		i++;
 	}
 	return (result * sign);

@@ -6,13 +6,12 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/05 18:18:50 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/05/02 12:47:09 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/05/07 11:35:59 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/* ==== create a new node ==== */
 static t_list	*create_node(int digit)
 {
 	t_list	*new_node;
@@ -25,8 +24,6 @@ static t_list	*create_node(int digit)
 	return (new_node);
 }
 
-/* ==== create the first node of the list, and send to link it to another newly
-created node ==== */
 t_list	*create_list(char **argv)
 {
 	t_list	*head;
