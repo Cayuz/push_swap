@@ -6,9 +6,10 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/05/07 15:24:09 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/05/07 15:24:24 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/05/07 16:04:00 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+hao
