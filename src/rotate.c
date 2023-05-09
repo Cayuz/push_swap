@@ -6,19 +6,17 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/05/07 19:22:52 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/05/09 11:47:21 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/05/09 18:00:21 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/*==============================================================================================
+/*=============================================================================================
 ra (rotate a): Shift up all elements of stack a by 1. The first element becomes the last one.
 rb (rotate b): Shift up all elements of stack b by 1. The first element becomes the last one.
 rr : ra and rb at the same time.
 ==============================================================================================*/
-
-/*first and last calibraten, first moet NULL als next hebben, last moet head->next pointeren.*/
 
 void	rotate(t_list **head)
 {
