@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/01 17:25:19 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/05/07 19:31:20 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/05/12 14:50:25 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@
 
 typedef struct s_struct{
 	int					value;
+	int					index;
 	struct s_struct		*next;
 }	t_list;
 
@@ -53,5 +54,9 @@ void	ss(t_list **a, t_list **b);
 
 //rotate functions
 void	rotate(t_list **head);
+
+//sort functions
+void	indexsort(t_list **stack);
+void	print_index_test(t_list **head_a);
 
 #endif

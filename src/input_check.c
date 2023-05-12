@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/23 12:54:16 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/05/07 15:24:29 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/05/12 15:25:06 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_dup(t_list *head)
 		{
 			if (num->value == head->value && num != head)
 			{
-				ft_error("Error: duplicates found");
+				ft_error("Error");
 				free_lists(head);
 			}
 			head = head->next;

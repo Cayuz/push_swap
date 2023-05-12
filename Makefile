@@ -8,7 +8,8 @@ INCLUDE		:=	push_swap.h -Ilibft -Ift_printf
 SRCS		:=	push_swap.c \
 				nodes.c \
 				input_check.c \
-				utils.c 
+				utils.c \
+				sort.c
 
 SRC			:=	$(addprefix $(SRC_DIR), $(SRCS))
 

@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/05 18:18:50 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/05/07 11:35:59 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/05/12 14:30:45 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ static t_list	*create_node(int digit)
 	if (!new_node)
 		return (0);
 	new_node->value = digit;
+	new_node->index = 0;
 	new_node->next = NULL;
 	return (new_node);
 }
