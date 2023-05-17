@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/02 14:53:51 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/05/17 17:36:52 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/05/17 18:04:06 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,8 @@ int	main(int argc, char **argv)
 	b = NULL;
 	ft_dup(a);
 	indexsort(&a);
+	if (argc = 4)
+		small_sort(&a, &b)
 	radix(&a, &b);
 	//sort
 	// print_index_test(&a);
