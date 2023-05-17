@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/05/07 19:22:52 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/05/09 18:03:14 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/05/17 16:49:44 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ rb (rotate b): Shift up all elements of stack b by 1. The first element becomes 
 rr : ra and rb at the same time.
 ==============================================================================================*/
 
-void	rotate(t_list **head)
+static void	rotate(t_list **head)
 {
 	t_list	*first;
 	t_list	*last;
 
-	if (!*head || !*head->next)
+	if (!*head || !(*head)->next)
 		return ;
 	last = *head;
 	while (last->next)

@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/05/09 16:59:52 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/05/09 18:00:09 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/05/17 16:50:47 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ rrb (reverse rotate b): Shift down all elements of stack b by 1. The last elemen
 rrr : rra and rrb at the same time.
 =======================================================================================================*/
 
-void	rev_rotate(t_list **head)
+static void	rev_rotate(t_list **head)
 {
-	t_list	last;
-	t_list	tmp;
+	t_list	*last;
+	t_list	*tmp;
 
 	if (!(*head))
 		return ;
@@ -29,8 +29,8 @@ void	rev_rotate(t_list **head)
 	while (last->next)
 		last = last->next;
 	tmp = *head;
-	while (temp->next->next)
-		temp = temp->next;
+	while (tmp->next->next)
+		tmp = tmp->next;
 	last->next = *head;
 	tmp->next = NULL;
 	*head = last;

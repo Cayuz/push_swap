@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/02 14:53:51 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/05/12 15:24:50 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/05/17 17:36:52 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,19 +35,6 @@ t_list	*create_stack(int argc, char **argv)
 	return (a);
 }
 
-void	print_index_test(t_list **head_a)
-{
-	t_list	*link;
-
-	link = *head_a;
-	indexsort(&link);
-	while (link != NULL)
-	{
-		ft_printf("%i", link->index);
-		link = link->next;
-	}
-}
-
 int	main(int argc, char **argv)
 {
 	t_list	*a;
@@ -58,9 +45,10 @@ int	main(int argc, char **argv)
 	a = create_stack(argc, argv);
 	b = NULL;
 	ft_dup(a);
-	// print_list(a, 'a');
-	print_index_test(&a);
+	indexsort(&a);
+	radix(&a, &b);
 	//sort
+	// print_index_test(&a);
 	free_lists(a);
 	free_lists(b);
 	return (0);

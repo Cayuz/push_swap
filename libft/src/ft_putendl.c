@@ -6,13 +6,13 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/05/07 19:21:07 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/05/07 19:21:19 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/05/17 16:51:50 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char *s)
+void	ft_putendl(char *s)
 {
 	int	i;
 

@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/05 18:18:50 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/05/12 14:30:45 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/05/17 17:02:59 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ t_list	*create_list(char **argv)
 	return (first);
 }
 
-/* ==== DELETE! ==== */
+/* ==== DELETE BOTH! ==== */
 void	print_list(t_list *node, int stack)
 {
 	printf("%c\n", stack);
@@ -64,4 +64,16 @@ void	print_list(t_list *node, int stack)
 		node = node->next;
 	}
 	printf("\n");
+}
+
+void	print_index_test(t_list **head_a)
+{
+	t_list	*tmp;
+
+	tmp = *head_a;
+	while (tmp != NULL)
+	{
+		ft_printf("%i", tmp->index);
+		tmp = tmp->next;
+	}
 }

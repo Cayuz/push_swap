@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/05/07 16:06:24 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/05/07 19:32:19 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/05/17 16:56:01 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,14 @@ sb (swap b): Swap the first 2 elements at the top of stack b. Do nothing if ther
 ss : sa and sb at the same time
 ===========================================================================================================*/
 
-void	swap(t_list **head)
+static void	swap(t_list **stack)
 {
 	t_list	*tmp;
 
-	if (!*stack || !*stack->next)
+	if (!*stack || !(*stack)->next)
 		return ;
-	tmp = (*head)->next;
-	(*head)->next = tmp->next;
+	tmp = (*stack)->next;
+	(*stack)->next = tmp->next;
 	tmp->next = *stack;
 	*stack = tmp;
 }

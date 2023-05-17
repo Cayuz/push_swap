@@ -9,7 +9,11 @@ SRCS		:=	push_swap.c \
 				nodes.c \
 				input_check.c \
 				utils.c \
-				sort.c
+				sort.c \
+				push.c \
+				swap.c \
+				rotate.c \
+				rev_rotate.c \
 
 SRC			:=	$(addprefix $(SRC_DIR), $(SRCS))
 

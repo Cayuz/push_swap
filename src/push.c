@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/05/09 11:45:32 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/05/09 16:55:37 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/05/17 16:47:18 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ pb (push b): Take the first element at the top of a and put it at the top of b.
 Do nothing if a is empty.
 ==============================================================================*/
 
-void	push(t_list **org, t_list **new)
+static void	push(t_list **org, t_list **new)
 {
-	t_list	temp;
+	t_list	*temp;
 
 	if (!*org)
 		return ;
@@ -31,21 +31,14 @@ void	push(t_list **org, t_list **new)
 	*org = temp; 
 }
 
-void	pa(t_list **a)
+void	pa(t_list **b, t_list **a)
 {
-	push(a);
+	push(b, a);
 	ft_putendl("pa");
 }
 
-void	pb(t_list **b)
+void	pb(t_list **a, t_list **b)
 {
-	push(b);
+	push(a, b);
 	ft_putendl("pb");
-}
-
-void	pp(t_list **a, t_list **b)
-{
-	push(a);
-	push(b);
-	ft_putendl("pp");
 }

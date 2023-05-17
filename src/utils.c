@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/25 18:25:59 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/05/07 13:21:08 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/05/17 16:51:32 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ void	free_lists(t_list *list)
 
 void	ft_error(char *msg)
 {
-	ft_putendl_fd(msg, STDERR_FILENO);
+	ft_putendl(msg);
 	exit(1);
 }
