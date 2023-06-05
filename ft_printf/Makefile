@@ -1,7 +1,7 @@
 NAME	:=	ft_printf.a
 INCLUDE	:=	ft_printf.h
 CC		:=	gcc
-CFLAGS	:=	-Wall -Werror -Wextra -g -fsanitize=address
+CFLAGS	:=	-Wall -Werror -Wextra
 
 SRCS	:=	\
 			ft_printf.c \

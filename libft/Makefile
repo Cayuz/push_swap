@@ -1,6 +1,6 @@
 NAME	:=	libft.a
 CC		:=	gcc
-CFLAGS	:=	-Wall -Werror -Wextra -g -fsanitize=address
+CFLAGS	:=	-Wall -Werror -Wextra 
 SRC_DIR	:=	src/
 OBJ_DIR	:=	obj/
 INCLUDE	:=	libft.h

@@ -1,6 +1,6 @@
 NAME		:=	push_swap
 CC			:=	gcc
-CFLAGS		:=	-Wall -Werror -Wextra -g -fsanitize=address
+CFLAGS		:=	-Wall -Werror -Wextra
 SRC_DIR		:=	src/
 OBJ_DIR		:=	obj/
 INCLUDE		:=	push_swap.h -Ilibft -Ift_printf
@@ -14,6 +14,7 @@ SRCS		:=	push_swap.c \
 				swap.c \
 				rotate.c \
 				rev_rotate.c \
+				small_sort.c \
 
 SRC			:=	$(addprefix $(SRC_DIR), $(SRCS))
 

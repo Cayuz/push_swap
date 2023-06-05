@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/05/12 14:34:07 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/05/17 17:48:56 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/06/05 14:38:51 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,22 +34,38 @@ void	indexsort(t_list **stack)
 	}
 }
 
-static int	node_counter(t_list **stack)
+int	node_counter(t_list **stack)
 {
 	int		count;
-	t_list	*temp;
+	t_list	*tmp;
 
 	count = 0;
-	temp = *stack;
-	while (temp)
+	tmp = *stack;
+	while (tmp)
 	{
 		count++;
-		temp = temp->next;
+		tmp = tmp->next;
 	}
 	return (count);
 }
 
-static int	is_sorted(t_list *a)
+int	max_index(t_list *stack)
+{
+	int		max;
+	t_list	*tmp;
+
+	tmp = stack;
+	max = INT_MIN;
+	while (tmp)
+	{
+		if (tmp->index > max)
+			max = tmp->index;
+		tmp = tmp->next;
+	}
+	return (max);
+}
+
+int	is_sorted(t_list *a)
 {
 	while (a && a->next)
 	{
