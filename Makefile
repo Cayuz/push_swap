@@ -1,20 +1,24 @@
 NAME		:=	push_swap
 CC			:=	gcc
-CFLAGS		:=	-Wall -Werror -Wextra
-SRC_DIR		:=	src/
 OBJ_DIR		:=	obj/
-INCLUDE		:=	push_swap.h -Ilibft -Ift_printf
+INCLUDE		:=	-I incl/
+CFLAGS		:=	-Wall -Werror -Wextra $(INCLUDE)
+SRC_DIR		:=	src/
 
-SRCS		:=	push_swap.c \
+SRCS		:=	input_check.c \
 				nodes.c \
-				input_check.c \
-				utils.c \
-				sort.c \
+				push_swap.c \
 				push.c \
-				swap.c \
-				rotate.c \
 				rev_rotate.c \
+				rotate.c \
 				small_sort.c \
+				sort.c \
+				swap.c \
+				utils.c \
+
+LIBS 		:= incl/libft/libft.a \
+			   incl/ft_printf/ft_printf.a \
+
 
 SRC			:=	$(addprefix $(SRC_DIR), $(SRCS))
 
@@ -41,16 +45,16 @@ MAGENTAB	:=	\033[1;35m
 CYANB		:=	\033[1;36m
 WHITEB		:=	\033[1;37m
 
-all: ft_printf libft ${NAME} 
+all: ${NAME} 
 
-libft:
-	@ make -C libft
+incl/libft/libft.a:
+	@ make -C incl/libft
 
-ft_printf:
-	@ make -C ft_printf
+incl/ft_printf/ft_printf.a:
+	@ make -C incl/ft_printf
 
-${NAME}: ${OBJS}
-	@ ${CC} $^ ${CFLAGS} libft/libft.a ft_printf/ft_printf.a -o ${NAME}
+${NAME}: ${OBJS} ${LIBS}
+	@ ${CC} $^ ${CFLAGS} incl/libft/libft.a incl/ft_printf/ft_printf.a -o ${NAME}
 	@ echo "${GREENB}Compiled ${RESET}${NAME}!"
 
 obj/%.o: %.c
@@ -62,19 +66,19 @@ $(OBJ_DIR)%.o: $(SRC_DIR)%.c
 
 clean: 
 	@ echo "${YELLOWB}Removing...${RESET}"
-	@ make -C libft clean
-	@ make -C ft_printf clean
+	@ make -C incl/libft clean
+	@ make -C incl/ft_printf clean
 	@ rm -rf ${OBJ_DIR}
 	@ echo "${YELLOWB}Removed programs!${RESET}"
 
 
 fclean: clean
 	@ echo "${MAGENTAB}Cleaning... ${RESET}"
-	@ make -C libft fclean
-	@ make -C ft_printf fclean
+	@ make -C incl/libft fclean
+	@ make -C incl/ft_printf fclean
 	@ rm -f ${NAME}
 	@ echo "${MAGENTAB}Cleaned: ${RESET}${NAME}, ft_printf, and libft!"
 
 re: fclean all
 
-.PHONY: all clean fclean re libft ft_printf
+.PHONY: all clean fclean re

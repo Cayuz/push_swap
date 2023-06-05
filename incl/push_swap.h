@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/01 17:25:19 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/06/05 14:36:47 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/06/05 15:37:51 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 /* ==== LIBRARIES ==== */
 
-# include "./libft/libft.h"
-# include "./ft_printf/ft_printf.h"
+# include "libft/libft.h"
+# include "ft_printf/ft_printf.h"
 # include <unistd.h>
 # include <stdio.h>
 # include <limits.h>
