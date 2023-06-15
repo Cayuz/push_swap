@@ -54,8 +54,9 @@ incl/ft_printf/ft_printf.a:
 	@ make -C incl/ft_printf
 
 ${NAME}: ${OBJS} ${LIBS}
+	@ echo "${GREENB}Compiling... ${RESET}"
 	@ ${CC} $^ ${CFLAGS} incl/libft/libft.a incl/ft_printf/ft_printf.a -o ${NAME}
-	@ echo "${GREENB}Compiled ${RESET}${NAME}!"
+	@ echo "${GREENB}Compiled ${NAME}!${RESET}"
 
 obj/%.o: %.c
 	@ ${CC} ${CFLAGS} -c -o $@ $<
@@ -77,7 +78,7 @@ fclean: clean
 	@ make -C incl/libft fclean
 	@ make -C incl/ft_printf fclean
 	@ rm -f ${NAME}
-	@ echo "${MAGENTAB}Cleaned: ${RESET}${NAME}, ft_printf, and libft!"
+	@ echo "${MAGENTAB}Cleaned everything! ${RESET}"
 
 re: fclean all
 

@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/21 11:20:04 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/06/05 17:29:49 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/06/15 17:18:13 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,19 +54,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	**ft_split(char *s, char c);
 int		ft_isspace(char c);
-void	ft_error();
+void	ft_error(void);
 void	ft_free_arr(char **arr);
-
-/* ====		FT_PRINTF FUNCTIONS		==== */
-
-int		ft_printf(const char *str, ...);
-int		check_percent(const char *s, va_list arguments);
-int		conversion(va_list arguments, char character);
-int		ft_put_c(int c);
-int		ft_put_s(char *s);
-int		ft_put_num(long int n);
-int		ft_put_u(unsigned long long n, unsigned int base, char c);
-int		ft_put_u_2(char c, int x, unsigned long long num);
-int		ft_put_p(void *n);
 
 #endif

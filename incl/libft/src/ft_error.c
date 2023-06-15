@@ -6,13 +6,13 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/06/05 17:30:01 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/06/05 17:30:21 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/06/15 17:18:47 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_error()
+void	ft_error(void)
 {
 	ft_putendl("Error");
 	exit(1);

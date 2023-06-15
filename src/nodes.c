@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/05 18:18:50 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/06/15 15:24:02 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/06/15 17:20:37 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,15 +32,14 @@ t_list	*create_list(char **argv)
 	t_list	*first;
 	int		i;
 
-	i = 1;
-	head = create_node((ft_atoi(argv[0])));
+	i = 0;
+	head = create_node((ft_atoi(argv[i])));
 	if (head == NULL)
-			return (NULL);
+		return (NULL);
 	first = head;
-	// printf("%i", head);
+	i++;
 	while (argv[i])
 	{
-		printf("bruv");
 		tmp = create_node((ft_atoi(argv[i])));
 		if (tmp == NULL)
 		{
@@ -48,7 +47,7 @@ t_list	*create_list(char **argv)
 			return (NULL);
 		}
 		head->next = tmp;
-		head = head->next;
+		head = tmp;
 		i++;
 	}
 	return (first);

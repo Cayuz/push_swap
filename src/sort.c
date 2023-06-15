@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/05/12 14:34:07 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/06/15 14:44:20 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/06/15 17:38:47 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ void	indexsort(t_list **stack)
 	i = 0;
 	current = *stack;
 	temp = *stack;
-	// printf("%s", "---\nIndex:");
 	while (current)
 	{
 		while (temp)

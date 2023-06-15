@@ -6,17 +6,11 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/05/07 16:06:24 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/05/17 16:56:01 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/06/15 17:39:38 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-/*===========================================================================================================
-sa (swap a): Swap the first 2 elements at the top of stack a. Do nothing if there is only one or no elements.
-sb (swap b): Swap the first 2 elements at the top of stack b. Do nothing if there is only one or no elements.
-ss : sa and sb at the same time
-===========================================================================================================*/
 
 static void	swap(t_list **stack)
 {

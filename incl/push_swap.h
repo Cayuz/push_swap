@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/01 17:25:19 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/06/05 17:18:54 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/06/15 17:17:53 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int		node_counter(t_list **stack);
 int		max_index(t_list *stack);
 
 //free and error functions
-void	ft_error();
+void	ft_error(void);
 void	free_lists(t_list *list);
 
 //swap functions

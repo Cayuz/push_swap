@@ -6,17 +6,11 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/05/09 16:59:52 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/05/17 16:50:47 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/06/15 17:40:01 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-/*=======================================================================================================
-rra (reverse rotate a): Shift down all elements of stack a by 1. The last element becomes the first one.
-rrb (reverse rotate b): Shift down all elements of stack b by 1. The last element becomes the first one.
-rrr : rra and rrb at the same time.
-=======================================================================================================*/
 
 static void	rev_rotate(t_list **head)
 {
