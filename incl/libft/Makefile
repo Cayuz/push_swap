@@ -41,6 +41,8 @@ SRCS	:=	\
 			ft_striteri.c \
 			ft_itoa.c \
 			ft_isspace.c \
+			ft_free_arr.c \
+			ft_error.c
 
 OBJS	:=	$(addprefix $(OBJ_DIR), $(SRCS:.c=.o))
 

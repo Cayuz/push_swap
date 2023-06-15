@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/21 11:20:04 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/05/17 16:48:15 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/06/05 17:29:49 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,9 @@ char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	**ft_split(char *s, char c);
-void	ft_error(char *msg);
-int		ft_isspace(char	c);
+int		ft_isspace(char c);
+void	ft_error();
+void	ft_free_arr(char **arr);
 
 /* ====		FT_PRINTF FUNCTIONS		==== */
 

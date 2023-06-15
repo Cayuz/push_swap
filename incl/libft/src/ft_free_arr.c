@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_putendl_fd.c                                    :+:    :+:            */
+/*   ft_free_arr.c                                      :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/11/08 15:28:08 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/06/05 15:51:22 by cvan-vli      ########   odam.nl         */
+/*   Created: 2023/06/05 17:23:42 by cvan-vli      #+#    #+#                 */
+/*   Updated: 2023/06/05 17:30:56 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char *s, int fd)
+void	ft_free_arr(char **arr)
 {
 	int	i;
 
 	i = 0;
-	while (s[i])
+	while (arr[i])
 	{
-		write(fd, &s[i], 1);
+		free(arr[i]);
 		i++;
 	}
-	write(fd, "\n", 1);
+	free(arr);
 }

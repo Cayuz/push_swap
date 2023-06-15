@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/05 18:18:50 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/05/17 17:02:59 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/06/15 15:24:02 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,14 @@ t_list	*create_list(char **argv)
 	if (head == NULL)
 			return (NULL);
 	first = head;
+	// printf("%i", head);
 	while (argv[i])
 	{
+		printf("bruv");
 		tmp = create_node((ft_atoi(argv[i])));
 		if (tmp == NULL)
 		{
-			// free_list(first);
+			free_lists(first);
 			return (NULL);
 		}
 		head->next = tmp;
@@ -55,7 +57,8 @@ t_list	*create_list(char **argv)
 /* ==== DELETE BOTH! ==== */
 void	print_list(t_list *node, int stack)
 {
-	printf("%c\n", stack);
+	stack -= 32;
+	printf("\nList %c:\n", stack);
 	while (node != NULL)
 	{
 		printf("%p -> ", node);
@@ -73,7 +76,7 @@ void	print_index_test(t_list **head_a)
 	tmp = *head_a;
 	while (tmp != NULL)
 	{
-		ft_printf("%i", tmp->index);
+		ft_printf("\nIndex:\n|%i|%p\n", tmp->index, tmp);
 		tmp = tmp->next;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/02 14:53:51 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/06/05 15:11:35 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/06/15 15:22:04 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,22 +16,21 @@ t_list	*create_stack(int argc, char **argv)
 {
 	int		i;
 	t_list	*a;
-	char	**temp;
+	char	**tmp;
 
 	i = 1;
-	if (argc == 2)
+	a = NULL;
+	printf("%s", "Stack:\n");
+	while (i < argc)
 	{
-		temp = ft_split(argv[1], ' ');
-		if (!temp || !temp[0])
-			ft_error("Error");
-		a = create_list(temp);
+		tmp = ft_split(argv[i], ' ');
+		if (!tmp || !tmp[0])
+			ft_error();
+		a = create_list(tmp);
+		printf("|%s|%p\n", *tmp, a);
+		ft_free_arr(tmp);
+		i++;
 	}
-	else
-		while (i < argc)
-		{
-			a = create_list(argv + 1);
-			i++;
-		}
 	return (a);
 }
 
@@ -45,16 +44,11 @@ int	main(int argc, char **argv)
 	a = create_stack(argc, argv);
 	b = NULL;
 	ft_dup(a);
-	indexsort(&a);
-	if (argc <= 4)
-		three_sort(&a);
-	else if (argc == 5 || argc == 6)
-		five_sort(&a, &b);
-	else
-		radix(&a, &b);
-	// print_list(a, 'a');
+	indexsort(&a);	
+	ft_sort(&a, &b);
+	print_index_test(&a);
+	print_list(a, 'a'); //DELETE THIS!!!!
 	free_lists(a);
 	free_lists(b);
 	return (0);
 }
-//maybe take out free lists

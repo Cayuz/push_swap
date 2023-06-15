@@ -1,26 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_putendl_fd.c                                    :+:    :+:            */
+/*   ft_error.c                                         :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/11/08 15:28:08 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/06/05 15:51:22 by cvan-vli      ########   odam.nl         */
+/*   Created: 2023/06/05 17:30:01 by cvan-vli      #+#    #+#                 */
+/*   Updated: 2023/06/05 17:30:21 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char *s, int fd)
+void	ft_error()
 {
-	int	i;
-
-	i = 0;
-	while (s[i])
-	{
-		write(fd, &s[i], 1);
-		i++;
-	}
-	write(fd, "\n", 1);
+	ft_putendl("Error");
+	exit(1);
 }

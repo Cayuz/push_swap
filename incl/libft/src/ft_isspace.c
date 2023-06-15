@@ -6,13 +6,13 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/25 17:39:33 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/04/25 17:42:13 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/06/05 15:50:52 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isspace(char	c)
+int	ft_isspace(char c)
 {
 	if ((c >= 9 && c <= 13) || c == 32)
 		return (1);

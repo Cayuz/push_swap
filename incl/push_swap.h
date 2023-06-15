@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/01 17:25:19 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/06/05 15:37:51 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/06/05 17:18:54 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int		node_counter(t_list **stack);
 int		max_index(t_list *stack);
 
 //free and error functions
-void	ft_error(char *msg);
+void	ft_error();
 void	free_lists(t_list *list);
 
 //swap functions
@@ -72,5 +72,6 @@ void	three_sort(t_list **a);
 void	four_sort(t_list **a, t_list **b);
 void	five_sort(t_list **a, t_list **b);
 int		is_sorted(t_list *a);
+void	ft_sort(t_list **a, t_list **b);
 
 #endif

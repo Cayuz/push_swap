@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/05/12 14:34:07 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/06/05 14:38:51 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/06/15 14:44:20 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,48 +21,18 @@ void	indexsort(t_list **stack)
 	i = 0;
 	current = *stack;
 	temp = *stack;
+	// printf("%s", "---\nIndex:");
 	while (current)
 	{
 		while (temp)
 		{
 			if (current->value < temp->value)
-			temp->index++;
+				temp->index++;
 			temp = temp->next;
 		}
 		temp = *stack;
 		current = current->next;
 	}
-}
-
-int	node_counter(t_list **stack)
-{
-	int		count;
-	t_list	*tmp;
-
-	count = 0;
-	tmp = *stack;
-	while (tmp)
-	{
-		count++;
-		tmp = tmp->next;
-	}
-	return (count);
-}
-
-int	max_index(t_list *stack)
-{
-	int		max;
-	t_list	*tmp;
-
-	tmp = stack;
-	max = INT_MIN;
-	while (tmp)
-	{
-		if (tmp->index > max)
-			max = tmp->index;
-		tmp = tmp->next;
-	}
-	return (max);
 }
 
 int	is_sorted(t_list *a)
@@ -74,6 +44,21 @@ int	is_sorted(t_list *a)
 		a = a->next;
 	}
 	return (1);
+}
+
+void	ft_sort(t_list **a, t_list **b)
+{
+	int	i;
+
+	i = node_counter(a);
+	if (is_sorted(*a) || i <= 1)
+		return ;
+	if (i <= 3)
+		three_sort(a);
+	else if (i <= 5)
+		five_sort(a, b);
+	else
+		radix(a, b);
 }
 
 void	radix(t_list **a, t_list **b)
