@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/05 18:18:50 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/06/15 17:20:37 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/06/20 14:17:09 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,13 @@ t_list	*create_list(char **argv)
 	int		i;
 
 	i = 0;
+	if (argv == NULL)
+		return (NULL);
 	head = create_node((ft_atoi(argv[i])));
 	if (head == NULL)
 		return (NULL);
 	first = head;
-	i++;
-	while (argv[i])
+	while (argv[++i])
 	{
 		tmp = create_node((ft_atoi(argv[i])));
 		if (tmp == NULL)
@@ -48,34 +49,6 @@ t_list	*create_list(char **argv)
 		}
 		head->next = tmp;
 		head = tmp;
-		i++;
 	}
 	return (first);
-}
-
-/* ==== DELETE BOTH! ==== */
-void	print_list(t_list *node, int stack)
-{
-	stack -= 32;
-	printf("\nList %c:\n", stack);
-	while (node != NULL)
-	{
-		printf("%p -> ", node);
-		printf("\e[0;32m%d\e[0m : ", node->value);
-		printf("[%p]\n", node->next);
-		node = node->next;
-	}
-	printf("\n");
-}
-
-void	print_index_test(t_list **head_a)
-{
-	t_list	*tmp;
-
-	tmp = *head_a;
-	while (tmp != NULL)
-	{
-		ft_printf("\nIndex:\n|%i|%p\n", tmp->index, tmp);
-		tmp = tmp->next;
-	}
 }

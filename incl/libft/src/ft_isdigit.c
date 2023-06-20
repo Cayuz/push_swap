@@ -6,15 +6,15 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/17 13:30:01 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/04/25 17:15:39 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/06/20 14:37:56 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int i)
+int	ft_isdigit(char i)
 {
-	if (i >= 0 && i <= 9)
+	if (i >= '0' && i <= '9')
 		return (1);
 	return (0);
 }

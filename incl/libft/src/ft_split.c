@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/08 12:14:15 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/05/07 11:31:29 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/06/20 15:12:09 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,10 @@ char	**ft_split(char *s, char c)
 		return (NULL);
 	arr = (char **)ft_calloc((ft_words(s, c) + 1), sizeof(char *));
 	if (!arr)
+	{
+		ft_free_arr(arr);
 		return (0);
+	}
 	if (!(ft_letters(s, c, arr)))
 		return (NULL);
 	return (arr);

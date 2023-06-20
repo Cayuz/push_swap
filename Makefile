@@ -2,7 +2,7 @@ NAME		:=	push_swap
 CC			:=	gcc
 OBJ_DIR		:=	obj/
 INCLUDE		:=	-I incl/
-CFLAGS		:=	-Wall -Werror -Wextra $(INCLUDE)
+CFLAGS		:=	-Wall -Werror -Wextra -g $(INCLUDE)
 SRC_DIR		:=	src/
 
 SRCS		:=	input_check.c \
@@ -17,7 +17,7 @@ SRCS		:=	input_check.c \
 				utils.c \
 
 LIBS 		:= incl/libft/libft.a \
-			   incl/ft_printf/ft_printf.a \
+			   incl/ft_printf/libprintf.a \
 
 
 SRC			:=	$(addprefix $(SRC_DIR), $(SRCS))
@@ -50,12 +50,12 @@ all: ${NAME}
 incl/libft/libft.a:
 	@ make -C incl/libft
 
-incl/ft_printf/ft_printf.a:
+incl/ft_printf/libprintf.a:
 	@ make -C incl/ft_printf
 
 ${NAME}: ${OBJS} ${LIBS}
 	@ echo "${GREENB}Compiling... ${RESET}"
-	@ ${CC} $^ ${CFLAGS} incl/libft/libft.a incl/ft_printf/ft_printf.a -o ${NAME}
+	@ ${CC} $^ ${CFLAGS} incl/libft/libft.a incl/ft_printf/libprintf.a -o ${NAME}
 	@ echo "${GREENB}Compiled ${NAME}!${RESET}"
 
 obj/%.o: %.c

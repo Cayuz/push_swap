@@ -1,4 +1,4 @@
-NAME	:=	ft_printf.a
+NAME	:=	libprintf.a
 INCLUDE	:=	ft_printf.h
 CC		:=	gcc
 CFLAGS	:=	-Wall -Werror -Wextra

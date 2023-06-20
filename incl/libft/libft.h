@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/21 11:20:04 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/06/15 17:18:13 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/06/20 14:38:20 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int		ft_toupper(int c);
 size_t	ft_strlen(const char *str);
 int		ft_isalpha(int i);
 int		ft_isascii(int c);
-int		ft_isdigit(int i);
+int		ft_isdigit(char i);
 int		ft_isprint(int c);
 int		ft_isalnum(char c);
 void	*ft_memset(void *src, int c, unsigned int n);
@@ -48,6 +48,7 @@ char	*ft_strtrim(char const *s1, char const *set);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl(char *s);
+void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
