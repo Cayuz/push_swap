@@ -6,7 +6,7 @@
 /*   By: cvan-vli <cvan-vli@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/02 14:53:51 by cvan-vli      #+#    #+#                 */
-/*   Updated: 2023/06/20 15:46:16 by cvan-vli      ########   odam.nl         */
+/*   Updated: 2023/06/21 13:26:18 by cvan-vli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,8 +60,6 @@ int	main(int argc, char **argv)
 	t_list	*a;
 	t_list	*b;
 
-	if (!argv[1][0])
-		ft_error();
 	if (argc < 2)
 		return (0);
 	a = create_stack(argc, argv);
