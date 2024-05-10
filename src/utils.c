@@ -6,13 +6,11 @@
 /*   By: cavan-vl <cavan-vl@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/02 11:48:25 by cavan-vl      #+#    #+#                 */
-/*   Updated: 2024/05/10 19:05:53 by cavan-vl      ########   odam.nl         */
+/*   Updated: 2024/05/10 19:41:26 by cavan-vl      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
-
-
 
 t_list	*init_stack(int ac, char **av)
 {

@@ -6,7 +6,7 @@
 /*   By: cavan-vl <cavan-vl@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/10 19:00:59 by cavan-vl      #+#    #+#                 */
-/*   Updated: 2024/05/10 19:07:15 by cavan-vl      ########   odam.nl         */
+/*   Updated: 2024/05/10 19:41:15 by cavan-vl      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 long	ft_atol(const char *nptr)
 {
-	int			i;
-	int			s;
+	int		i;
+	int		s;
 	long	r;
 
 	i = 0;

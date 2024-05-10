@@ -6,7 +6,7 @@
 /*   By: cavan-vl <cavan-vl@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/10 18:36:47 by cavan-vl      #+#    #+#                 */
-/*   Updated: 2024/05/10 19:40:38 by cavan-vl      ########   odam.nl         */
+/*   Updated: 2024/05/10 19:41:36 by cavan-vl      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void	check_input(char **input)
 	long	digit;
 
 	i = 1;
-	while(input[i])
+	while (input[i])
 	{
 		check_digit(input[i]);
 		digit = ft_atol(input[i]);
