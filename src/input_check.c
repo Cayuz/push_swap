@@ -6,7 +6,7 @@
 /*   By: cavan-vl <cavan-vl@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/10 18:36:47 by cavan-vl      #+#    #+#                 */
-/*   Updated: 2024/05/10 19:29:33 by cavan-vl      ########   odam.nl         */
+/*   Updated: 2024/05/10 19:40:38 by cavan-vl      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ void	check_dup(t_list *head)
 		temp = head;
 		while (temp)
 		{
-
 			if (next->value == temp->value && next != temp)
 			{
 				free_list(head);
