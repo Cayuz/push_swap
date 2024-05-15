@@ -6,7 +6,7 @@
 /*   By: cavan-vl <cavan-vl@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/08 18:21:18 by cavan-vl      #+#    #+#                 */
-/*   Updated: 2024/05/10 16:44:04 by cavan-vl      ########   odam.nl         */
+/*   Updated: 2024/05/15 15:56:49 by cavan-vl      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ void	print_list(t_list **head)
 	while (temp)
 	{
 		ft_printf("value: %i\n", temp->value);
-		ft_printf("index: %i\n", temp->index);
 		temp = temp->next;
 	}
 }
